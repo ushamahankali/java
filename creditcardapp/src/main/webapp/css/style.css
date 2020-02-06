@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+img{max-width:100%;}
+
+.headerblue {
+	background-image: url(../img/header_blueWave.jpg);
+	-webkit-background-size: 1px 60px;
+	background-size: 1px 60px;
+	padding-top: 0;
+	min-height: 60px;
+}
+
+.logo{padding-top:px;}
+
+.topnav {background-color:#05589d; }
+.page-footer{background-color:#05589d; margin-top:30px; color: #fff !important;}
+.topnav a {color:#f0eee9; padding:15px;}
+.page-footer a{color:#f0eee9}
+
+.topnav a:hover, .active{background-color: #497cba !important}
+.usernav{background-color: #05589d; color: #fff;width:100%;}
+.usernav a{color: #fff;}
+
+.formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.form-group{
+	padding:20px;
+}
+
+.applybtn{
+	background:linear-gradient(#92D100 0%, #84BD00 100%) !important;
+}

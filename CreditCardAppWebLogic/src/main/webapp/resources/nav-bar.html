@@ -1,0 +1,23 @@
+<nav class="bg-light pt-4">
+  <div class="text-center pt-3 pb-4"><a class="h4 text-info text-decoration-none" href="./home.do"><i class="fas fa-chart-line"></i> XYZBank</a></div>
+
+  <ul class="nav nav-tabs justify-content-center">
+	  <li class="nav-item">
+	    <a class="nav-link active text-info"  id="nav-home" href="./home.do"><i class="fas fa-home"></i> Home</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link text-info"  id="nav-creditcard" href="./creditcard.do"><i class="far fa-credit-card"></i> Credit Card</a>
+	  </li>
+  </ul>
+</nav>
+
+<script>
+if((location.pathname).includes("home.do")){
+	$("#nav-home").addClass("active");
+	$("#nav-creditcard").removeClass("active");	 
+}
+else {
+	$("#nav-creditcard").addClass("active");
+	$("#nav-home").removeClass("active");	  
+} 
+</script>

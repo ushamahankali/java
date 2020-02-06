@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mvc="http://www.springframework.org/schema/mvc" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<context:component-scan base-package="com.nivtek.creditcardapp"></context:component-scan>
+	<mvc:annotation-driven />
+	
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+<!--  	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /> 
+		<property name="url" value="jdbc:mysql://localhost:3306/creditcard" />
+		<property name="username" value="admin" />
+		<property name="password" value="admin" />
+	</bean>  -->
+	
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<property name="jndiName" value="jdbc/mysqlDS"/>
+	</bean>
+	
+	<bean id="accountService" class="com.nivtek.creditcardapp.service.AccountService"></bean>
+	<bean id="creditCardService" class="com.nivtek.creditcardapp.service.CreditCardService"></bean>
+	<bean id="loginService" class="com.nivtek.creditcardapp.service.LoginService"></bean>
+	<bean id="accountDAO" class="com.nivtek.creditcardapp.dao.AccountDAO">
+		<property name="dataSource" ref="dataSource" /></bean>
+	<bean id="applicationDAO" class="com.nivtek.creditcardapp.dao.ApplicationDAO">
+		<property name="dataSource" ref="dataSource" /></bean>
+	<bean id="contactDAO" class="com.nivtek.creditcardapp.dao.ContactDAO">
+		<property name="dataSource" ref="dataSource" /></bean>
+	<bean id="creditCardDAO" class="com.nivtek.creditcardapp.dao.CreditCardDAO">
+		<property name="dataSource" ref="dataSource" /></bean>
+	<bean id="customerDAO" class="com.nivtek.creditcardapp.dao.CustomerDAO">
+		<property name="dataSource" ref="dataSource" /></bean>
+	<bean id="securityQuestionDAO" class="com.nivtek.creditcardapp.dao.SecurityQuestionDAO">
+		<property name="dataSource" ref="dataSource" /></bean>
+    
+</beans>

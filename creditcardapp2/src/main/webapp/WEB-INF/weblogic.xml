@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-web-app>
+	<context-root>/trustbank</context-root>
+	<container-descriptor>
+		<show-archived-real-path-enabled>true
+		</show-archived-real-path-enabled>
+	</container-descriptor>
+
+	<resource-description>
+		<jndi-name>appds</jndi-name>
+		<res-ref-name>jdbc/trustbank</res-ref-name>
+	</resource-description>
+
+</weblogic-web-app>

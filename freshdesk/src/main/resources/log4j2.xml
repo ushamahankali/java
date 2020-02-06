@@ -1,0 +1,33 @@
+  <Configuration>
+    <Properties name = "logs" value="">
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+        <Property name="APP_LOG_ROOT">c:/logs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+ 
+        <RollingFile name="appLog"
+            fileName="${APP_LOG_ROOT}/com.ektha.freshdesk/app.log"
+            filePattern="${APP_LOG_ROOT}/com.ektha.freshdesk/application-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+           
+        </RollingFile>
+ 
+    </Appenders>
+    <Loggers>
+ 
+        <Logger name="com.ektha.freshdesk" additivity="false">
+            <AppenderRef ref="appLog" />
+            <AppenderRef ref="Console" />
+        </Logger>
+ 
+  <Root >
+            <AppenderRef ref="appLog" />
+        </Root>
+        <Root>
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration> 
