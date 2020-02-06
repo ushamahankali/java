@@ -1,0 +1,17 @@
+Create a class hierarchy for Mammals using Mammal as an interface.
+
+Create interfaces for LandMammal and WaterMammal (eg. whale).
+
+Create Concrete classes that implement LandMammal and WaterMammal classes.
+
+Example of Concrete class that implements from LandMammal are Lion, HumanBeing, etc.
+Example of Concrete class that implements from WaterMammal is Whale.
+
+Declare abstract methods like swim for WaterMammal and walk, run, crawl for LandMammals.
+
+Feel free to create your own class hierarchy, abstract methods and concrete methods here.
+
+Show in a main method how to create the objects of the concrete classes using
+Interfaces as the data types.
+
+Implmentations of the run, swim or walk methods can just have simple print statments.

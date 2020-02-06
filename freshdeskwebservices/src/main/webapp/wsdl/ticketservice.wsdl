@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TicketServiceService" targetNamespace="http://service.freshdeskwebservices.ektha.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.freshdeskwebservices.ektha.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://service.freshdeskwebservices.ektha.com/" schemaLocation="ticketservice_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="createTicket">
+    <wsdl:part name="parameters" element="tns:createTicket">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createTicketResponse">
+    <wsdl:part name="parameters" element="tns:createTicketResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTicket">
+    <wsdl:part name="parameters" element="tns:getTicket">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTicketResponse">
+    <wsdl:part name="parameters" element="tns:getTicketResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TicketService">
+    <wsdl:operation name="createTicket">
+      <wsdl:input name="createTicket" message="tns:createTicket">
+    </wsdl:input>
+      <wsdl:output name="createTicketResponse" message="tns:createTicketResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTicket">
+      <wsdl:input name="getTicket" message="tns:getTicket">
+    </wsdl:input>
+      <wsdl:output name="getTicketResponse" message="tns:getTicketResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TicketServiceServiceSoapBinding" type="tns:TicketService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createTicket">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createTicket">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createTicketResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTicket">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTicket">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTicketResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TicketServiceService">
+    <wsdl:port name="TicketServicePort" binding="tns:TicketServiceServiceSoapBinding">
+      <soap:address location="http://localhost:8080/freshdeskwebservices/services/TicketServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

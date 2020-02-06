@@ -1,0 +1,12 @@
+Write a method reverseList  that takes an ArrayList of Strings as a parameter and that reverses every element.
+
+For example, if the list stores the values 
+{"how", "are", "you?"}
+
+ before the method is called, it should store the values 
+{"woh", "era", "uoy"}
+
+ after the method finishes executing.
+ 
+Always, write junit test method for every assignment.
+

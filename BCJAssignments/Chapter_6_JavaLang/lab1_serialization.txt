@@ -1,0 +1,12 @@
+Take an object of classA which inherits from classC and classA 
+contains an instance of classB. classA has instance variable int i,and 
+classC has a instance variable String s;Make classA serializable but dont 
+make classB and classC seriazlizable.classB has an instance variable long l; 
+and classA has a transient instance variable int j;if you serialize a 
+and store it as bytes check if it throws an exception; after serializing it 
+deserialize the bytes in the first program and verify and print the contents
+of class A,B,C. and see that the transient variable have the value of zero.
+
+taking about program see what happens when you serialize B AND A.. 
+taking about program see what happens when you serialize C AND A.. 
+taking about program see what happens when you serialize B AND A AND C.. 

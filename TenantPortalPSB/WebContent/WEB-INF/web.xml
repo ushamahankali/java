@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <servlet>
+    <servlet-name>tenant</servlet-name>
+    <servlet-class>com.ektha.tenantportalpsb.controller.TenantInformationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tenant</servlet-name>
+    <url-pattern>/tcontroller</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>tenantsuit</servlet-name>
+    <servlet-class>com.ektha.tenantportalpsb.controller.TenantController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tenantsuit</servlet-name>
+    <url-pattern>/suitNumber</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>tenantinsert</servlet-name>
+    <servlet-class>com.ektha.tenantportalpsb.controller.TenantInsertController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tenantinsert</servlet-name>
+    <url-pattern>/form</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>tenantlist</servlet-name>
+    <servlet-class>com.ektha.tenantportalpsb.controller.TenantDetailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tenantlist</servlet-name>
+    <url-pattern>/arraylist</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>tenantmap</servlet-name>
+    <servlet-class>com.ektha.tenantportalpsb.controller.TenantContactDetailsMapController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tenantmap</servlet-name>
+    <url-pattern>/hashmap</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,24 @@
+Given a string:
+
+"324, 457, 112, 259, 323, 222"
+
+Parse the string, split it into an array of numbers.
+
+For each of the numbers, sum up the digits,
+
+Output of this method should be an array of numbers with the max sum.
+
+In the above:
+
+3+2+4 = 9
+4+5+7= 16
+1+1+2 = 4
+2+5+9 = 16
+3+2+3 = 8
+2+2+2 = 6
+
+Max is 16 for 457 and 259.
+
+The output of the method will be an array containing the numbers 457 and 259.
+
+

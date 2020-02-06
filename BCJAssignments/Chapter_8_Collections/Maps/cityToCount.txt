@@ -1,0 +1,36 @@
+Write a method called cityCount that takes a Map as input.
+The input map contains Person names(keys) and the city (values) they live in.
+
+The method will return a new Map that contains the city names (keys) and
+the count(values stored as String) of the number of persons who live in the city.
+
+Example: 
+
+INPUT MAP
+---------
+
+"John"    - "Dallas"
+
+"Babbar"  - "NewYork City"
+
+"Akbar"   - "Houston"
+
+"Rizwan"  - "Dallas"
+
+"Jorge"   - "Paris"
+
+"Roshan"  - "Dallas"
+
+"Sujit"   - "Houston"
+
+
+OUTPUT MAP
+----------
+
+"Dallas"         -   "3"
+"Houston"        -   "2"
+"Paris"          -   "1"
+"NewYork City"   -   "1"
+
+
+

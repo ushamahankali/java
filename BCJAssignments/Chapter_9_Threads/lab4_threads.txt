@@ -1,0 +1,24 @@
+What will happen if you run the following program... 
+
+public class TestClass extends Thread
+{
+   public void run()
+   {
+      for(;;);
+   }
+
+   public static void main(String args[])
+   {
+      System.out.println("Starting main");
+      new TestClass().start();
+      System.out.println("Main returns");
+   }
+
+}
+ 
+Select 3 correct options 
+a  It will print "Starting Main"   
+b  It will print "Main returns"   
+c  It will not print "Main returns"   
+d  The program will never exit.   
+e  main() method will never return   

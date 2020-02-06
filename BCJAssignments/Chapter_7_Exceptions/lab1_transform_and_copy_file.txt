@@ -1,0 +1,17 @@
+Take a file name (String) and a directory name (String) as inputs to your method.
+
+Call the method name transformAndCopyFile.
+
+The file name & the directory name in the inputs can be a relative paths or absolute paths.
+
+Do the following transformations and store the file in a new file with the same name
+as the original name in the destination directory specified in the input.
+
+Transformations to be performed:
+
+1) Remove all blank lines
+2) Remove all single line comments (anything after // including the //).
+
+Store the transformed file in the new location specified by the destination directory specified in the input.
+
+The original source file should remain unchanged.

@@ -1,0 +1,15 @@
+Write a method reverseOddAndEvenList  that takes an ArrayList of Strings as a parameter 
+and that reverses elements at odd positions with the elements at the even positions.
+
+For example, if the list stores the values 
+
+{"how", "are", "you?", "I", "am", "doing", "fine"}
+
+ before the method is called, it should store the values 
+
+{"are", "how", "I", "you?", "doing", "am", "fine"}
+
+ after the method finishes executing.
+ 
+Always, write junit test method for every assignment.
+

@@ -1,0 +1,11 @@
+Create an Employee Class with the following Constructors:
+1) Employee(String firstName)
+2) Employee(String firstName, String lastName)
+3) Employee(String firstName, String lastName, int employeeId)
+4) Employee(String firstName, String lastName, int employeeId, Date dateOfBirth)
+
+Create the 4 overloaded constructors and demonstrate in a main method by creating 4 employee
+objects using all the 4 of the above constructors.
+
+Use constructor chaining for code reuse.
+

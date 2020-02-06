@@ -1,0 +1,37 @@
+* Find the sum of 4 numbers
+  10,40,142.5,333.62
+
+* Perform all arithmetic operation for the given below numbers
+ 	a=45, b =-21
+
+* Declare and initialize a variable of type String with the value "Hello how are you".
+
+* Declare and initialize a variable of type char with the value 'H'.
+
+* Upcasting: declare a variable of type int and assign it to a variable of type long.
+
+* Downcasting: declare a variable of type long and assign it to a variable of type int.
+
+* Declare an array of 10 ints & initialize them to the value of 1.
+
+* Declare an array of 26 Chars & initialize them to the value of a to z.
+
+* Declare a 2D table of 7 rows by 5 columns that contains ints.
+
+* Convert a String "10" to a primitive int.
+
+
+Reviews: 
+
+Total: 9 hrs
+Attended Core Java class(5hrs).
+completed few of the remaining assignments(2hrs).
+Practiced some samples on ArrayList(2hrs).
+
+Goals:
+
+My goal is to study more about collections.
+
+Blockers:
+
+No blockers

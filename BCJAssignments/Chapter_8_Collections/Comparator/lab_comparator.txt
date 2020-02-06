@@ -1,0 +1,41 @@
+Create a file called Sorting.java. Copy and paste the following program into it:
+
+import java.util.*;
+
+class Sorting {
+  
+  public static void main(String[] args) {
+    int listSize = 30;
+    int magnitude = 500;
+    Random rand = new Random(12345);
+    
+	ArrayList<Integer> numbers = new ArrayList<Integer>(listSize);
+    for (int i=0; i < listSize; i++) {
+      numbers.add(rand.nextInt() % magnitude);
+	}
+    
+	Collections.sort(numbers);
+    
+	for (Integer num : numbers) {
+      System.out.print(num + " ");
+	}
+    System.out.println();
+  }
+}
+
+Look through the documentation for the class Collections. Specifically, find the method sort, 
+and notice that there is another version of it that takes a Comparator object.
+
+(b) Add a class to the top of the file called BackwardOrdering that implements the Comparator
+ interface such that integers are ordered in reverse from their usual ordering. 
+ The following line of code should then sort the integers in reverse order:
+    Collections.sort(numbers, new BackwardOrdering());
+	
+Add this line of code to the bottom of your program, then add a copy of the loop to print
+ out the numbers again.
+
+(c) Add a class to the top of the file called AlternatingOrdering that implements the Comparator
+ interface such even that positive numbers are ordered as usual, but negative numbers are ordered
+ in reverse. All positive numbers (and zero) are larger than all negative numbers. Add more code 
+ to the main method to sort the numbers by this wacky method using Collections.sort, 
+  then print out the results.

@@ -1,0 +1,2 @@
+Create a program that turns a birthday in MM/DD/YYYY format (such as 04/29/2013) 
+into three individual strings.

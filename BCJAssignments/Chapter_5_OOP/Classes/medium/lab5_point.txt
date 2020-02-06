@@ -1,0 +1,22 @@
+Create a class called Point with x and y coords as attributes of type int.
+
+1) Write test cases for the following methods of the Point class.
+
+Define the methods on the point class:
+
+distanceFromAnotherPoint
+slopeWithAnotherPoint
+isCollinear
+midPoint
+distanceFromOrigin
+isVertical
+IsHorizontal
+quadrant
+
+2) Generate stubs while writing the junit test methods
+
+3) Provide implementation for the stub methods and ensure all the test cases pass.
+
+
+
+

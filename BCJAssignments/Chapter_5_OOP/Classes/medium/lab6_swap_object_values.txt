@@ -1,0 +1,10 @@
+Given a class:
+
+class IntegerWrapper {
+
+  privae int a;
+  public IntegerWrapper(int a) { this.i = a; }
+}
+
+write a public method called swap( ) that exchanges the contents of the objects referred to by 
+two Test object references.

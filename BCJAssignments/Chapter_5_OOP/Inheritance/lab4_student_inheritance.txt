@@ -1,0 +1,15 @@
+Draw an inheritance hierarchy for students at a university.
+
+Use Student as the superclass of the hierarchy, then extend Student with classes such as 
+Under-graduateStudent and GraduateStudent. Continue to extend the hierarchy as deep 
+(i.e., as many levels) as possible.
+
+For example, Freshman, Sophomore, Junior and Senior might extend UndergraduateStudent
+and DoctoralStudent and MastersStudent might be subclasses of GraduateStudent.
+
+1) Write code for each of the classes in the above inheritance hierarchy, including valid
+   constructors, setters and getters & some validation methods or any other useful methods.
+
+2) Write a demo program that illustrates the "is-a" relationship when creating objects.
+
+

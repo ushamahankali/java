@@ -1,0 +1,2 @@
+The weight of an object on moon is 17% of that on the earth.
+Write a method which converts from earth weight to moon weight.

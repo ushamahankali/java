@@ -1,0 +1,121 @@
+
+Consider the following standalone Java application, consisting of
+three classes, TestHost1, Host1 and Helper1:
+
+public class TestHost1 {
+  public static void main(String argv[]) {
+    Host1 ho = new Host1();
+    System.out.println("3 + 4 + 17 + 5 = " + ho.sum(3,4,17,5));
+  } 
+}
+
+public class Host1 {
+
+  public int sum(int a, int b, int c, int d) {
+    Helper1 he = new Helper1(c,d);
+    Thread aux = new Thread(he);
+    aux.start();
+    int temp = a+b;
+    try{
+      aux.join();
+    }
+    catch(InterruptedException e) { }
+    temp = temp + he.getResult();
+    return temp;
+  } 
+     
+}
+
+public class Helper1 implements Runnable {
+
+  int x, y, result;
+
+  public Helper1(int e, int f) {
+    x = e;
+    y = f;
+  }
+
+  public int getResult() {
+    return result;
+  }
+
+  public void run() {
+    result = x + y;
+  } 
+}
+
+You will have observed that work is delegated by the main thread to an auxiliary thread.
+Which of the two threads performs each of the following operations:
+
+creates a helper;
+adds 3 and 4;
+adds 17 and 5;
+invokes getResult();
+returns 22;
+adds 7 and 22.
+
+In the above program, what are each of the two threads doing at the point at which they synchronize?
+
+Now consider another way to implement the program:
+
+public class TestHost2 {
+
+  public static void main(String argv[]) {
+    Host2 ho = new Host2();
+    System.out.println("3 + 4 + 17 + 5 = " + ho.sum(3,4,17,5));
+  } 
+}
+
+public class Host2 {
+
+  int z;
+
+  public Host2() { }
+
+  public synchronized int sum(int a, int b, int c, int d) {
+
+    Helper2 he = new Helper2(c,d,this);
+    Thread aux = new Thread(he);
+    aux.start();
+    int temp = a+b;
+    try{
+      wait();
+    }
+    catch(InterruptedException e) { }
+    temp = temp + z;
+    return temp;
+
+  } 
+
+  public synchronized void callback(int a) {
+    z = a;
+    notify();
+  }
+}
+
+public class Helper2 implements Runnable {
+  int x, y, result;
+  Host2 client;
+
+  public Helper2(int e, int f, Host2 h) {
+    x = e;
+    y = f;
+    client = h;
+  }
+
+  public void run() {
+    result = x + y;
+    client.callback(result);
+  } 
+}
+
+Again work is delegated by the main thread to an auxiliary thread. 
+Which of the two threads performs each of the following operations:
+
+adds 3 and 4;
+adds 17 and 5;
+invokes callback()
+invokes notify()
+adds 7 and 22;
+
+In Host2, why will notify() always occur after wait()?

@@ -1,0 +1,19 @@
+Write an application that uses only the output statements
+
+System.out.print( "* " );
+System.out.print( " " );
+System.out.println();
+
+to display the checkerboard pattern shown below.
+
+
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+* * * * * * * *
+ * * * * * * * *
+
+[Hint: Use repetition java statements.]

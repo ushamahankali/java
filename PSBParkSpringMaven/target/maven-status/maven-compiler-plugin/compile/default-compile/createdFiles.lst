@@ -1,0 +1,10 @@
+com\psb\bizportal\tenant\service\LocationService.class
+com\psb\bizportal\tenant\entity\Address.class
+com\psb\bizportal\tenant\entity\Contact.class
+com\psb\bizportal\tenant\controller\TenantController.class
+com\psb\bizportal\tenant\entity\Location.class
+com\psb\bizportal\tenant\service\TenantService.class
+com\psb\bizportal\tenant\entity\Tenant.class
+com\psb\bizportal\tenant\dao\TenantDAO.class
+com\psb\bizportal\tenant\dao\LocationDAO.class
+com\psb\bizportal\tenant\dao\TenantDAO$1.class

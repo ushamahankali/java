@@ -1,0 +1,6 @@
+Besides first name and last name, add a 3rd program argument called age.
+Parse it as a primitive int using 
+
+int age = Integer.parseInt(args[2]);
+
+Print first name, last name and age of the person.

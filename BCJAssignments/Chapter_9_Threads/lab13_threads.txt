@@ -1,0 +1,30 @@
+What will be the output when the following code is run? 
+
+class MyRunnable implements Runnable
+{
+	MyRunnable(String name)
+	{
+		new Thread(this, name).start();
+	}
+	public void run()
+	{
+		System.out.println(Thread.currentThread().getName());
+	}
+}
+public class TestClass
+{
+	public static void main(String[] args)
+	{
+		Thread.currentThread().setName("First");
+		MyRunnable mr = new MyRunnable("MyRunnable");
+		mr.run();
+		Thread.currentThread().setName("Second");
+		mr.run();
+	}
+}
+Select 1 correct option. 
+a  It will always print: First, MyRunnable, Second.   
+b  It will always print: MyRunnable, First, Second.   
+c  It will always print: First, Second,  MyRunnable.   
+d  It may print First, Second and MyRunnable in any order.   
+e  Second will always be printed after First.  

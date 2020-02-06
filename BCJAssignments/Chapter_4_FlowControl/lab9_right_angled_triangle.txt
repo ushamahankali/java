@@ -1,0 +1,2 @@
+Write an application that reads three nonzero integers and determines and prints
+ whether they could represent the sides of a right angled triangle. (Pythagoras Theorem)

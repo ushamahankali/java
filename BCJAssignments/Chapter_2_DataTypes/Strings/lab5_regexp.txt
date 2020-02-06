@@ -1,0 +1,38 @@
+
+Use the matches method of the String class to implement the following:
+
+1) Write a java program that takes a telephone number as a string
+   and outputs whether it is valid or not.
+
+Use regular expressions to validate the phone number.
+
+Valid phone number formats:
+xxx-xxx-xxxx
+xxx.xxx.xxxx
+xxx xxx xxxx
+
+where every x is from 0 to 9.
+
+2) Write a java program that takes an IP address as a string
+   and outputs whether it is valid or not.
+
+Use regular expressions to validate the IP address
+
+Valid IP address formats:
+x.x.x.x
+
+where every x is either a 1=digit or a 2-digit or a 3-digit number.
+
+3) Write a java program that takes an email address as a string
+   and outputs whether it is valid or not.
+
+Use regular expressions to validate the email address.
+
+Assume the following:
+a) email address ends with .com
+b) 1 or more alphabetic characters before @.
+c) 1 or more alphabetic characters after @ and before .com
+
+
+
+

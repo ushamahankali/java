@@ -1,0 +1,51 @@
+Here is a Java program that creates a Set using a HashSet implementation:
+
+import java.util.*;
+
+public class SetDemo {
+
+  public static void main( String [] args ) {
+
+    // Create a set called mySet
+    Set mySet = new HashSet();
+
+    // Ensure that this set contains an interesting selection of fruit 
+    String fruit1 = "pear", fruit2 = "banana", fruit3 = "tangerine",
+                            fruit4 = "strawberry", fruit5 = "blackberry";
+    mySet.add( fruit1 );
+    mySet.add( fruit2 );
+    mySet.add( fruit3 );
+    mySet.add( fruit2 );
+    mySet.add( fruit4 );
+    mySet.add( fruit5 );
+
+    // Display contents of mySet
+    System.out.println( "mySet now contains:" );
+    System.out.println( mySet );
+
+  }
+}
+
+Execute this program.
+
+Why don't the fruit get listed in the order in which they were added?
+
+Extend the program in a stepwise manner using the standard collection interface methods to do the following:
+
+1) display the cardinality of (i.e. the number of elements in) mySet;
+2) remove the blackberry and strawberry; display contents of mySet again to confirm success;
+3) remove the remaining fruit using a single method invocation;
+4) show that the set is now empty by using the isEmpty() method.
+
+Compilation and execution of your program should result in output similar to this:
+
+   % javac SetDemo.java
+   % java -cp . SetDemo
+   mySet now contains:
+   [blackberry, tangerine, strawberry, pear, banana]
+   number of elements = 5
+   blackberry and strawberry removed; mySet now contains:
+   [tangerine, pear, banana]
+   mySet has been cleared.
+   mySet is now empty.
+   %
